@@ -14,7 +14,7 @@ namespace Sentiment
         public SentimentService()
         {
             _httpClient = new HttpClient();
-            //_httpClient.DefaultRequestHeaders.Add("User-Agent", "data-sentiment");
+            _httpClient.DefaultRequestHeaders.Add("User-Agent", "data-sentiment");
 
         }
         public async Task<IList<Result>> GetEmojis()
