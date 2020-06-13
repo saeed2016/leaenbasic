@@ -8,13 +8,13 @@ namespace Sentiment
 {
     public class SentimentService : ISentimentService
     {
-        const string GitEmojiUrl = "https://raw.githubusercontent.com/KeithGalli/sklearn/master/data/sentiment/Books_small.json";
+        const string GitEmojiUrl = "https://github.com/KeithGalli/sklearn.git";
         private readonly HttpClient _httpClient;
         private IList<Result> _emojis;
         public SentimentService()
         {
             _httpClient = new HttpClient();
-            _httpClient.DefaultRequestHeaders.Add("User-Agent", "KeithGalli/sklearn/data/sentiment");
+            //_httpClient.DefaultRequestHeaders.Add("User-Agent", "data-sentiment");
 
         }
         public async Task<IList<Result>> GetEmojis()
